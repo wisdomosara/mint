@@ -1,6 +1,35 @@
 
 
-
+.header-right ul li{
+  float: left;
+  list-style-type: none;
+  margin-left:30px
+}
 .round-img{
   border-radius: 50%
+}
+.name{
+  margin-top: -25px;
+  width: auto
+}
+.notification{
+  position: relative;
+}
+.search-input{
+  border-style: none;
+}
+.search-input:focus, .search-input:target{
+  border-style: none;
+  outline: none
+}
+.badge{
+  position: absolute;
+  top:0;
+  right:1px;
+  background-color: blue;
+  color: white;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  border-radius: 50%;
 }
