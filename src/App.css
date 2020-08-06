@@ -24,7 +24,7 @@ body{
   margin-left:34px;
   color: #647787;
 }
-ul{
+.header-right ul{
   padding: 0;
   margin: 0
 }
@@ -107,6 +107,9 @@ ul{
   margin-right: 43px;
   margin-top: 33px;
 }
+.highlight{
+  margin-bottom: 27px;
+}
 .highlight-item{
   width: 253px;
   height: 75px;
@@ -119,4 +122,48 @@ ul{
 }
 .figures{
   margin-top: -10px
+}
+.charts{
+  height: 329px;
+  width: 100%;
+  background-color: #ffffff
+}
+.charts-left{
+  width:689px;
+  height: 100%;
+  background-color: #FFFFFF;
+  border-right: 4px solid #F7F8FA;
+}
+.range-dropdown ul{
+  width: 138px !important;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  border: 1px solid #DDE0E3
+}
+.range-dropdown ul li{
+  list-style-type: none;
+  padding:6px 10px;
+  cursor: pointer;
+}
+.range-dropdown ul li:hover{
+  background: #F4F4F4;
+}
+.range-dropdown button{
+  width: 138px;
+  background-color: #ffffff;
+  border: 1px solid #DDE0E3;
+  border-radius: 4.25px;
+  color: #7F8FA4;
+  font-size: 12px;
+  height: 31px;
+}
+.range-dropdown button:focus, .range-dropdown button:target{
+  outline: none;
+}
+.range-dropdown{
+  width: 138px;
+  position: relative;
 }
