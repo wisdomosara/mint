@@ -6,7 +6,7 @@ body{
 .header{
   overflow: auto;
   background: #FFFFFF;
-  height: 10vh;
+  height: 60px;
   box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
   z-index: 4;
 }
@@ -21,7 +21,7 @@ body{
   float: left;
   font-size: 14px;
   list-style-type: none;
-  margin-left:30px;
+  margin-left:34px;
   color: #647787;
 }
 ul{
@@ -59,13 +59,14 @@ ul{
 .badge{
   position: absolute;
   top:0;
-  right:1px;
+  right:0;
   background-color: blue;
   color: white;
   width: 15px;
   height: 15px;
   font-size: 10px;
   border-radius: 50%;
+  margin-top: -6px
 }
 .sidebar{
   padding-top: 33px;
@@ -73,8 +74,9 @@ ul{
   background-color: #FFFFFF;
   height: 100vh;
   display: flex;
+  margin-top: 2px;
   flex-direction: column;
-  margin-right: 30px;
+  margin-right: 29px;
 }
 .invoice-btn{
   background: #27AE60;
@@ -100,9 +102,21 @@ ul{
   margin-bottom: 0;
 }
 .body{
-  background-color: #27AE60;
-  width: 80%;
+  width: 86%;
   height: 100vh;
   margin-right: 43px;
   margin-top: 33px;
+}
+.highlight-item{
+  width: 253px;
+  height: 75px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  padding:18px 19px
+}
+.highlight-item p{
+  font-size: 12px
+}
+.figures{
+  margin-top: -10px
 }
