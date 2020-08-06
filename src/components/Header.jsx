@@ -24,8 +24,8 @@ export default class Header extends Component {
                             <li>
                                 <div className="d-flex align-items-start">
                                     <div className="mr-2 pt-2">
-                                        <p className="text-right">Hello</p>
-                                        <p className="text-right name"> Oluwaleke Ojo</p>
+                                        <p className="text-right small-name">Hello</p>
+                                        <p className="text-right big-name"> Oluwaleke Ojo</p>
                                     </div>
                                     <img src="images/IMG-20180413-WA0005.png" className="round-img mt-2" width="40px" height="43px"></img>
                                 </div>

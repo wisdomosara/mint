@@ -1,16 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,900&display=swap');
 
-
+body{
+  background: #F7F8FA;
+}
+.header{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
+}
+.header-left h3{
+  color:#1875F0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+}
 .header-right ul li{
   float: left;
   list-style-type: none;
-  margin-left:30px
+  margin-left:30px;
+  color: #647787;
+}
+ul{
+  padding: 0;
+  margin: 0
+}
+.header-right{
+  font-family: Segoe UI;
 }
 .round-img{
   border-radius: 50%
 }
-.name{
+.small-name{
+  font-size: 13px;
+}
+.big-name{
   margin-top: -25px;
-  width: auto
+  width: auto;
+  font-size: 19px
 }
 .notification{
   position: relative;
