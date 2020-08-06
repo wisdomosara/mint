@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 export default class Header extends Component {
     render() {
         return (
-            <div className="header d-flex justify-content-between align-items-baseline px-4">
+            <div className="header d-flex justify-content-between align-items-baseline px-5">
                 <div className="header-left d-flex align-items-baseline">
                     <h3>TransMonitor</h3>
-                    <div className="searchbox ml-5">
+                    <div className="searchbox">
                         <img src='images/search.png' width="15px" className="mr-2"></img>
                         <input type="search" placeholder="Search" className="search-input"></input>
                     </div>

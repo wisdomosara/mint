@@ -4,8 +4,11 @@ body{
   background: #F7F8FA;
 }
 .header{
+  overflow: auto;
   background: #FFFFFF;
+  height: 10vh;
   box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
+  z-index: 4;
 }
 .header-left h3{
   color:#1875F0;
@@ -23,6 +26,9 @@ body{
 ul{
   padding: 0;
   margin: 0
+}
+.searchbox{
+  margin-left: 100px;
 }
 .header-right{
   font-family: Segoe UI;
@@ -58,4 +64,36 @@ ul{
   height: 15px;
   font-size: 10px;
   border-radius: 50%;
+}
+.sidebar{
+  position: relative;
+  left:0;
+  width: 260px;
+  background-color: #FFFFFF;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.invoice-btn{
+  background: #27AE60;
+  width: 163px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  height: 33px;
+  margin-left:31px;
+  border-style: none;
+  border-radius: 30px;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+}
+.sidebar-main{
+  margin-left:31px;
+}
+.sidebar-main p{
+  font-family: Segoe UI;
+  font-size: 11px;
+  color: #647787;
+  margin-bottom: 0;
 }
