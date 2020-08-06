@@ -2,12 +2,24 @@ import React, { Component } from 'react'
 
 export default class Body extends Component {
     state = {
-        clicked : false,
+        clickedRange : false,
         range : "1 Jan - 30 June",
         show : 20,
         payment: "All"
     }
-    
+    handlerange = (e) => {
+        this.setState({
+            range: e.target.textContent
+        })
+        this.handlerangeclick()
+    }
+    handlerangeclick = () => {
+        this.setState(prevState => {
+            return {
+                clickedRange:!prevState.clickedRange
+            }
+        })
+    }
     render() {
         return (
             <div className="body">
@@ -45,18 +57,26 @@ export default class Body extends Component {
                         </div>
                     </div>
                 </div>
-                <section className="charts">
+                <section className="charts d-flex">
                     <div className="charts-left">
                         <div className="charts-left-top px-3 d-flex justify-content-between py-2">
                             <h5>Today: 5, Aug 2018</h5>
-                            <div>
-                                <div className="range-dropdown">
-                                    <button className="range-btn">{this.state.range}<span className="ml-4"><img src="images/Shape.png" width="10px"></img></span></button>
-                                    <ul>
-                                        <li>Wisdom</li>
-                                        <li>Wisdom</li>
-                                        <li>Wisdom</li>
-                                    </ul>
+                            <div className="d-flex align-items-center">
+                                <div className="range-dropdown mr-3">
+                                    <button className="range-btn" onClick={this.handlerangeclick}>{this.state.range}<span className="ml-4"><img src="images/Shape.png" width="10px"></img></span></button>
+                                    {this.state.clickedRange ? <ul>
+                                        <li onClick={this.handlerange}>1 Jan - 30 June</li>
+                                        <li onClick={this.handlerange}>1 July - 31 Dec</li>
+                                    </ul> : null}
+                                </div>
+                            
+                                <div className="d-flex">
+                                    <div className="arrow-holder d-flex align-items-center justify-content-center mr-3">
+                                        <img src="images/Arrow (1).png" width="15px"></img>
+                                    </div>
+                                    <div className="arrow-holder d-flex align-items-center justify-content-center">
+                                        <img src="images/Arrow.png" width="15px"></img>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -64,8 +84,9 @@ export default class Body extends Component {
                             
                         </div>
                     </div>
-                    <div className="charts-right">
-
+                    <div className="charts-right p-3">
+                        <h4 className="mb-3">Orders</h4>
+                        <progress className="progress_bar" value="80" max="100"></progress>
                     </div>
                 </section>
             </div>

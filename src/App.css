@@ -147,6 +147,7 @@ body{
   list-style-type: none;
   padding:6px 10px;
   cursor: pointer;
+  color: #7F8FA4;
 }
 .range-dropdown ul li:hover{
   background: #F4F4F4;
@@ -166,4 +167,27 @@ body{
 .range-dropdown{
   width: 138px;
   position: relative;
+}
+.arrow-holder{
+  width: 30px;
+  border: 1px solid #DDE0E3;
+  border-radius: 4px;
+  height: 23px;
+}
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 250px;
+  height: 4px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #FDC203;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+  background-color: #27AE60;
+  border-radius: 2px; 
 }
