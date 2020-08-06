@@ -19,6 +19,7 @@ body{
 }
 .header-right ul li{
   float: left;
+  font-size: 14px;
   list-style-type: none;
   margin-left:30px;
   color: #647787;
@@ -40,15 +41,16 @@ ul{
   font-size: 13px;
 }
 .big-name{
-  margin-top: -25px;
+  margin-top: -20px;
   width: auto;
-  font-size: 19px
+  font-size: 14px
 }
 .notification{
   position: relative;
 }
 .search-input{
   border-style: none;
+  font-size: 14px;
 }
 .search-input:focus, .search-input:target{
   border-style: none;
@@ -66,13 +68,13 @@ ul{
   border-radius: 50%;
 }
 .sidebar{
-  position: relative;
-  left:0;
-  width: 260px;
+  padding-top: 33px;
+  width: 260px !important;
   background-color: #FFFFFF;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-right: 30px;
 }
 .invoice-btn{
   background: #27AE60;
@@ -96,4 +98,11 @@ ul{
   font-size: 11px;
   color: #647787;
   margin-bottom: 0;
+}
+.body{
+  background-color: #27AE60;
+  width: 80%;
+  height: 100vh;
+  margin-right: 43px;
+  margin-top: 33px;
 }
