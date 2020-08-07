@@ -1,4 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+
+
+ class Table extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
+}
+
 
 export default class Body extends Component {
     state = {
@@ -126,7 +139,7 @@ export default class Body extends Component {
                 </div>
                 <div className="payment">
                     <h4>Payments</h4>
-                    <div className="filter-row d-flex align-items-baseline">
+                    <div className="filter-row d-flex align-items-baseline flex-wrap">
                         <p className="mr-4">Showing</p>
                         <div className="show-dropdown mr-5">
                             <button className="show-btn" onClick={this.handleshowclick}>{this.state.show}<span className="ml-2"><img src="images/Shape.png" width="10px"></img></span></button>
@@ -135,7 +148,7 @@ export default class Body extends Component {
                                 <li onClick={this.handleshow}>20</li>
                             </ul> : null}
                         </div>
-                        <p className="mr-5">out of 500 payments</p>
+                        <p className="mr-1 out">out of 500 payments</p>
                         <div className="search-payments mr-4">
                             <img src='images/search.png' width="15px" className="mr-2"></img>
                             <input type="search" placeholder="Search Payments.." className="search-input"></input>

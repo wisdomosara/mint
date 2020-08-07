@@ -108,8 +108,6 @@ body{
 
 .highlight{
   margin-bottom: 27px;
-  width: 100%;
-  max-width:100%;
 }
 .highlight-item{
   width: 248px;
@@ -122,18 +120,19 @@ body{
   font-size: 12px
 }
 .body{
-  width: calc(100% -280px);
+  width: calc(100% - 280px);
   padding:20px;
-  max-width: calc(100% -280px);
+  max-width: calc(100% - 280px);
 }
 .figures{
   margin-top: -10px
 }
 .charts{
-  height: 329px;
+  overflow: scroll;
   width: 100%;
-  max-width: 100%;
-  overflow-x: scroll;
+  height: 329px ;
+  overflow-y:hidden;
+  overflow-x: auto;
 }
 .charts-left{
   min-width:689px;
@@ -250,7 +249,7 @@ progress[value]::-webkit-progress-value {
 .search-payments {
   height: 20px;
   padding-bottom: 30px !important;
-  width: 300px !important;
+  width: 25vw !important;
   border-bottom: 0.5px solid #787878;
 }
 .search-payments input{
@@ -293,31 +292,47 @@ progress[value]::-webkit-progress-value {
   width: 150px;
   position: relative;
 }
-.payments{
+.filter-row{
   width: 100%;
   max-width: 100%;
-  overflow-x: scroll;
+}
+.payment{
+  width: 100%;
+  max-width: 100%;
 }
 @media only screen and (max-width: 579px) {
   .highlight-item {
-    width: 100% !important;
+    min-width: 100% !important;
   }
   .body{
-    width: 100% !important;
+    min-width: 100% !important;
   }
   .highlight{
     flex-direction: column;
     max-width: 100vw;
     width: 90% !important
   }
-  .charts{
-    max-width: 100vw;
+  .charts {
+    width: 90vw !important
+  }
+  .charts-left{
+    width:100vw
   }
   .header-right{
     display: none;
   }
-  .payments{
-    max-width: 100vw;
+  .filter-row{
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .search-payments {
+    height: 20px;
+    padding-bottom: 30px !important;
+    width: 80vw !important;
+    border-bottom: 0.5px solid #787878;
+  }
+  .filter-row .out{
+    margin-right:30px !important
   }
   .searchbox{
     display: none
@@ -332,8 +347,15 @@ progress[value]::-webkit-progress-value {
   .sidebar{
     display: none
   }
-  .charts-left{
-    width: 500px;
+  .highlight-item {
+    min-width: 240px !important;
+  }
+  .highlight{
+    min-width:90vw !important;
+  }
+  .charts{
+    min-width: 95vw !important;
+    
   }
   .searchbox{
     display: none
@@ -345,16 +367,32 @@ progress[value]::-webkit-progress-value {
   .header-right{
     display: none;
   }
+  .filter-row{
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+  .search-payments {
+    height: 20px;
+    padding-bottom: 30px !important;
+    border-bottom: 0.5px solid #787878;
+  }
+  .payment{
+    min-width: 100vw !important
+  }
+  .out{
+    margin-right: 30px !important
+  }
 }
 
 @media only screen and (min-width:1366px) {
-
+  .header{
+    padding-right:3% !important
+  }
 }
 @media only screen and (min-width:600px) {
   @media only screen and (max-width:767px) {
     .highlight{
       margin-bottom: 27px;
-      margin-left:20px;
       width: 100%;
   }
 }
