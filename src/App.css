@@ -105,13 +105,11 @@ body{
   color: #647787;
   margin-bottom: 0;
 }
-.body{
-  margin-top: 33px;
-  box-sizing: border-box;
-  flex: 1;
-}
+
 .highlight{
   margin-bottom: 27px;
+  width: 100%;
+  max-width:100%;
 }
 .highlight-item{
   width: 248px;
@@ -123,12 +121,18 @@ body{
 .highlight-item p{
   font-size: 12px
 }
+.body{
+  width: calc(100% -280px);
+  padding:20px;
+  max-width: calc(100% -280px);
+}
 .figures{
   margin-top: -10px
 }
 .charts{
-  width: 1000px;
   height: 329px;
+  width: 100%;;
+  max-width: 100%;
   overflow-x: scroll;
 }
 .charts-left{
@@ -216,6 +220,14 @@ progress[value]::-webkit-progress-value {
   .body{
     width: 100% !important;
   }
+  .highlight{
+    flex-direction: column;
+    max-width: 100vw;
+    width: 90% !important
+  }
+  .charts{
+    max-width: 100vw;
+  }
   .header-right{
     display: none;
   }
@@ -226,6 +238,50 @@ progress[value]::-webkit-progress-value {
     display: flex;
     align-items: center;
   }
+}
+.show-dropdown ul{
+  width: 40px !important;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  border: 1px solid #DDE0E3
+}
+.show-dropdown ul li{
+  list-style-type: none;
+  padding:6px 10px;
+  cursor: pointer;
+  color: #7F8FA4;
+}
+.show-dropdown ul li:hover{
+  background: #F4F4F4;
+}
+.show-dropdown button{
+  width: 60px;
+  background-color: transparent;
+  border-style: none;
+  border-radius: 4.25px;
+  color: #7F8FA4;
+  font-size: 12px;
+  height: 31px;
+}
+.show-dropdown button:focus, .show-dropdown button:target{
+  outline: none;
+}
+.show-dropdown{
+  width: 40px;
+  position: relative;
+}
+.search-payments {
+  height: 20px;
+  padding-bottom: 30px !important;
+  width: 300px !important;
+  border-bottom: 0.5px solid #787878;
+}
+.search-payments input{
+  padding: 0 !important;
+  background-color: transparent !important;
 }
 @media only screen and (max-width: 767px) {
   .sidebar{
@@ -247,4 +303,13 @@ progress[value]::-webkit-progress-value {
 }
 @media only screen and (min-width:1366px) {
 
+}
+@media only screen and (min-width:600px) {
+  @media only screen and (max-width:767px) {
+    .highlight{
+      margin-bottom: 27px;
+      margin-left:20px;
+      width: 100%;
+  }
+}
 }

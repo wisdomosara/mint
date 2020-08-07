@@ -5,13 +5,20 @@ export default class Body extends Component {
         clickedRange : false,
         range : "1 Jan - 30 June",
         show : 20,
-        payment: "All"
+        payment: "All",
+        clickedshow: false
     }
     handlerange = (e) => {
         this.setState({
             range: e.target.textContent
         })
         this.handlerangeclick()
+    }
+    handleshow = (e) => {
+        this.setState({
+            show: e.target.textContent
+        })
+        this.handleshowclick()
     }
     handlerangeclick = () => {
         this.setState(prevState => {
@@ -20,20 +27,26 @@ export default class Body extends Component {
             }
         })
     }
+    handleshowclick = () => {
+        this.setState(prevState => {
+            return {
+                clickedshow:!prevState.clickedshow
+            }
+        })
+    }
     render() {
         return (
-        <div>
-            <div className='body container'>
+        <React.Fragment>
+            <div className="d-flex body flex-column">
                 <div className="highlight d-flex flex-wrap">
-                    
-                        <div className="highlight-item mr-md-2 mb-2 d-flex justify-content-between flex-wrap">
+                        <div className="highlight-item mr-sm-2 mb-2 d-flex justify-content-between flex-wrap">
                             <div>
                                 <p>Daily Transaction Volume</p>
                                 <p className="font-weight-bold figures">2,342</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                        <div className="highlight-item mr-md-2 mb-2 d-flex justify-content-between">
+                        <div className="highlight-item mr-sm-2 mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Daily Transaction Value</p>
                                 <p className="font-weight-bold figures">₦4,000,000</p>
@@ -42,7 +55,7 @@ export default class Body extends Component {
                         </div>
                     
                     
-                        <div className="highlight-item mr-md-2 mb-2 d-flex justify-content-between">
+                        <div className="highlight-item mr-sm-2 mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Total Transaction Volume</p>
                                 <p className="font-weight-bold figures">452,000</p>
@@ -57,8 +70,7 @@ export default class Body extends Component {
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
                 </div>
-            </div>
-            <div className="charts container d-flex">
+                <div className="charts  d-flex">
                     <div className="charts-left">
                         <div className="charts-left-top px-3 d-flex justify-content-between py-2">
                             <h5>Today: 5, Aug 2018</h5>
@@ -97,8 +109,39 @@ export default class Body extends Component {
                         <p>Reconcilled Payments: 80</p>
                         <p>Total Payments: 100</p>
                     </div>
+                </div>
+                <div className="payment">
+                    <h4>Payments</h4>
+                    <div className="filter-row d-flex align-items-baseline">
+                        <p className="mr-4">Showing</p>
+                        <div className="show-dropdown mr-5">
+                            <button className="show-btn" onClick={this.handleshowclick}>{this.state.show}<span className="ml-2"><img src="images/Shape.png" width="10px"></img></span></button>
+                            {this.state.clickedshow ? <ul>
+                                <li onClick={this.handleshow}>10</li>
+                                <li onClick={this.handleshow}>20</li>
+                            </ul> : null}
+                        </div>
+                        <p className="mr-5">out of 500 payments</p>
+                        <div className="search-payments mr-4">
+                            <img src='images/search.png' width="15px" className="mr-2"></img>
+                            <input type="search" placeholder="Search Payments.." className="search-input"></input>
+                        </div>
+                        <p>Show</p>
+                        <div className="range-dropdown mr-3">
+                            <button className="range-btn" onClick={this.handlerangeclick}>{this.state.range}<span className="ml-4"><img src="images/Shape.png" width="10px"></img></span></button>
+                            {this.state.clickedRange ? <ul>
+                                <li onClick={this.handlerange}>All</li>
+                                <li onClick={this.handlerange}>Reconcilled</li>
+                                <li onClick={this.handlerange}>Un-reconcilled</li>
+                                <li onClick={this.handlerange}>Settled</li>
+                                <li onClick={this.handlerange}>Unsettled</li>
+                            </ul> : null}
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-        </div>
+        </React.Fragment>
             
         )
     }
