@@ -22,42 +22,43 @@ export default class Body extends Component {
     }
     render() {
         return (
-            <div className="body">
-                <div className="highlight d-flex justify-content-between">
-                    <div className="highlight-left d-flex">
-                        <div className="highlight-item mr-2 d-flex justify-content-between">
+        <div>
+            <div className='body'>
+                <div className="highlight d-flex justify-content-between flex-wrap">
+                    
+                        <div className="highlight-item mb-2 d-flex justify-content-between flex-wrap">
                             <div>
                                 <p>Daily Transaction Volume</p>
                                 <p className="font-weight-bold figures">2,342</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                        <div className="highlight-item mr-2 d-flex justify-content-between">
+                        <div className="highlight-item mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Daily Transaction Value</p>
                                 <p className="font-weight-bold figures">₦4,000,000</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                    </div>
-                    <div className="highlight-right d-flex">
-                    <div className="highlight-item mr-2 d-flex justify-content-between">
+                    
+                    
+                        <div className="highlight-item mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Total Transaction Volume</p>
                                 <p className="font-weight-bold figures">452,000</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                        <div className="highlight-item d-flex justify-content-between">
+                        <div className="highlight-item mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Total Transaction Value</p>
                                 <p className="font-weight-bold figures">₦4,000,000</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                    </div>
                 </div>
-                <section className="charts d-flex">
+            </div>
+            <div className="charts d-flex flex-wrap">
                     <div className="charts-left">
                         <div className="charts-left-top px-3 d-flex justify-content-between py-2">
                             <h5>Today: 5, Aug 2018</h5>
@@ -96,8 +97,9 @@ export default class Body extends Component {
                         <p>Reconcilled Payments: 80</p>
                         <p>Total Payments: 100</p>
                     </div>
-                </section>
             </div>
+        </div>
+            
         )
     }
 }

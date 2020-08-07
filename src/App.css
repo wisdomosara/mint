@@ -2,9 +2,12 @@
 
 body{
   background: #F7F8FA;
+  box-sizing: border-box;
+  width: auto;
 }
 .header{
-  overflow: auto;
+  width: 100vw;
+  overflow: hidden;
   background: #FFFFFF;
   height: 60px;
   box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
@@ -68,15 +71,17 @@ body{
   border-radius: 50%;
   margin-top: -6px
 }
+.bodyWrapper{
+  max-width: 1440px
+}
 .sidebar{
   padding-top: 33px;
-  width: 260px !important;
+  min-width:260px !important;
   background-color: #FFFFFF;
-  height: 100vh;
   display: flex;
   margin-top: 2px;
   flex-direction: column;
-  margin-right: 29px;
+  box-sizing: border-box;
 }
 .invoice-btn{
   background: #27AE60;
@@ -102,16 +107,18 @@ body{
   margin-bottom: 0;
 }
 .body{
-  width: 86%;
-  height: 100vh;
+  max-width: 1100px;
   margin-right: 43px;
   margin-top: 33px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  flex: 1;
 }
 .highlight{
   margin-bottom: 27px;
 }
 .highlight-item{
-  width: 253px;
+  width: 248px;
   height: 75px;
   background-color: #FFFFFF;
   border-radius: 2px;
@@ -124,15 +131,17 @@ body{
   margin-top: -10px
 }
 .charts{
+  width: 100vw;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 329px;
-  width: 100%;
-  background-color: #ffffff
 }
 .charts-left{
   width:689px;
   height: 100%;
   background-color: #FFFFFF;
   border-right: 4px solid #F7F8FA;
+  margin-bottom: 20px;
 }
 .range-dropdown ul{
   width: 138px !important;
@@ -192,10 +201,32 @@ progress[value]::-webkit-progress-value {
   background-color: #27AE60;
   border-radius: 2px; 
 }
+.charts-right{
+  width: 340px !important;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  height: 100%;
+}
 .charts-right p{
   font-size: 14px;
   color: #262626;
   margin-top:-5px;
   margin-bottom: 10px !important;
   padding: 0 !important
+}
+@media only screen and (max-width: 579px) {
+  .highlight-item {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sidebar{
+    display: none
+  }
+  .charts-left{
+    width: 500px;
+  }
+}
+@media only screen and (min-width:1366px) {
+
 }

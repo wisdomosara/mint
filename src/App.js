@@ -6,14 +6,12 @@ import Body from './components/Body'
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Header />
-      <div className="d-flex">
-        <Sidebar />
-        <Body />
+        <div className="d-flex">
+          <Sidebar />
+          <Body />
       </div>
-      
-      
     </div>
   );
 }
