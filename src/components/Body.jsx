@@ -4,9 +4,29 @@ import React, { Component } from 'react';
 
  class Table extends Component {
     render() {
+        const style = {
+            backgroundColor: "#FFFFFF",
+            borderBottom : "1px solid #CCCFD4",
+            height: 76
+        }
         return (
-            <div>
-                
+            <div className="d-flex align-items-center px-3" style={style}>
+                <div className="name d-flex align-items-center">
+                    <img src="images/vw symbol.png" className="mr-3" width="36px"></img>
+                    <p className="pt-2">Apple Mac Book 15” 250 SSD 12GB</p>
+                </div>
+                <div className="price text-left pt-3" >
+                    <p>$73430</p>
+                </div>
+                <div className="transact pt-3" >
+                    <p>1234567890</p> 
+                </div>
+                <div className="time pt-3" >
+                    <p>12:30</p>
+                </div>
+                <div className="status pt-3" >
+                    <button><span><img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> </span> Reconciled</button>
+                </div>
             </div>
         )
     }
@@ -165,7 +185,26 @@ export default class Body extends Component {
                             </ul> : null}
                         </div>
                     </div>
-                    
+                    <div className="table d-flex px-3 align-items-center">
+                        <div className="name pt-3" >
+                            <p>Item Type</p>
+                        </div>
+                        <div className="price pt-3" >
+                            <p>Price</p>
+                        </div>
+                        <div className="transact pt-3" >
+                            <p>Transaction No</p> 
+                        </div>
+                        <div className="time pt-3" >
+                            <p>Time</p>
+                        </div>
+                        <div className="status pt-3" >
+                            <p>Status</p>
+                        </div>
+                    </div>
+                    <Table />
+                    <Table />
+                    <Table />
                 </div>
             </div>
         </React.Fragment>

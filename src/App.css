@@ -300,6 +300,48 @@ progress[value]::-webkit-progress-value {
   width: 100%;
   max-width: 100%;
 }
+.table p, .name p, .price p, .transact p, .time p, .status p{
+  font-size: 14px !important
+}
+.name{
+  width:300px;
+  margin-right: 157px;
+}
+.price{
+  width:62px;
+  margin-right: 54px;
+}
+.transact{
+  width:94px;
+  margin-right: 71px;
+}
+.time{
+  width:32px;
+  margin-right: 59px;
+}
+.status{
+  width:120px;
+  padding-top:-15px;
+}
+.status button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-radius: 40px;
+  padding: 5px 20px;
+  margin-top: -15px;
+  background-color: transparent;
+  border:1px solid #DDE0E3
+}
+.table{
+  background-color: #EAEEF0;
+  height: 42px;
+  margin:0 !important;
+  min-width: 100%;
+  overflow: scroll
+}
+
 @media only screen and (max-width: 579px) {
   .highlight-item {
     min-width: 100% !important;
