@@ -85,8 +85,16 @@ export default class Body extends Component {
                         </div>
                     </div>
                     <div className="charts-right p-3">
-                        <h4 className="mb-3">Orders</h4>
-                        <progress className="progress_bar" value="80" max="100"></progress>
+                        <p>Orders</p>
+                        <progress  value="80" max="100"></progress>
+                        <p>Pending Orders: 20</p>
+                        <p>Reconcilled Orders: 80</p>
+                        <p>Total Orders: 100</p>
+                        <p className=" mt-5">Orders</p>
+                        <progress  value="80" max="100"></progress>
+                        <p>Un-reconcilled Payments: 20</p>
+                        <p>Reconcilled Payments: 80</p>
+                        <p>Total Payments: 100</p>
                     </div>
                 </section>
             </div>

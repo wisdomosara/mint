@@ -178,16 +178,24 @@ progress[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
    appearance: none;
-
-  width: 250px;
+  width: 305px;
   height: 4px;
 }
 progress[value]::-webkit-progress-bar {
   background-color: #FDC203;
   border-radius: 2px;
+  margin-top:-15px;
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 progress[value]::-webkit-progress-value {
   background-color: #27AE60;
   border-radius: 2px; 
+}
+.charts-right p{
+  font-size: 14px;
+  color: #262626;
+  margin-top:-5px;
+  margin-bottom: 10px !important;
+  padding: 0 !important
 }
