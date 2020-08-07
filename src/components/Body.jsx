@@ -23,17 +23,17 @@ export default class Body extends Component {
     render() {
         return (
         <div>
-            <div className='body'>
-                <div className="highlight d-flex justify-content-between flex-wrap">
+            <div className='body container'>
+                <div className="highlight d-flex flex-wrap">
                     
-                        <div className="highlight-item mb-2 d-flex justify-content-between flex-wrap">
+                        <div className="highlight-item mr-md-2 mb-2 d-flex justify-content-between flex-wrap">
                             <div>
                                 <p>Daily Transaction Volume</p>
                                 <p className="font-weight-bold figures">2,342</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                        <div className="highlight-item mb-2 d-flex justify-content-between">
+                        <div className="highlight-item mr-md-2 mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Daily Transaction Value</p>
                                 <p className="font-weight-bold figures">₦4,000,000</p>
@@ -42,7 +42,7 @@ export default class Body extends Component {
                         </div>
                     
                     
-                        <div className="highlight-item mb-2 d-flex justify-content-between">
+                        <div className="highlight-item mr-md-2 mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Total Transaction Volume</p>
                                 <p className="font-weight-bold figures">452,000</p>
@@ -58,7 +58,7 @@ export default class Body extends Component {
                         </div>
                 </div>
             </div>
-            <div className="charts d-flex flex-wrap">
+            <div className="charts container d-flex flex-wrap">
                     <div className="charts-left">
                         <div className="charts-left-top px-3 d-flex justify-content-between py-2">
                             <h5>Today: 5, Aug 2018</h5>
