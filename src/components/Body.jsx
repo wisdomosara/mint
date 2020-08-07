@@ -1,31 +1,38 @@
 import React, { Component } from 'react';
-
+import data from './dummydata'
 
 
  class Table extends Component {
+
     render() {
         const style = {
             backgroundColor: "#FFFFFF",
             borderBottom : "1px solid #CCCFD4",
             height: 76
         }
+        const yes = {
+            color: "#7AE602"
+        }
+        const no = {
+            color : "#EBC315"
+        }
         return (
             <div className="d-flex align-items-center table-component px-3" style={style}>
                 <div className="name d-flex align-items-center">
                     <img src="images/vw symbol.png" className="mr-3" width="36px"></img>
-                    <p className="pt-2">Apple Mac Book 15” 250 SSD 12GB</p>
+                    <p className="pt-2">{this.props.table["name"]}</p>
                 </div>
                 <div className="price text-left pt-3" >
-                    <p>$73430</p>
+                    <p>{this.props.table.price}</p>
                 </div>
                 <div className="transact pt-3" >
-                    <p>1234567890</p> 
+                    <p>{this.props.table.transactionNo}</p> 
                 </div>
                 <div className="time pt-3" >
-                    <p>12:30</p>
+                    <p>{this.props.table.time}</p>
                 </div>
                 <div className="status pt-3" >
-                    <button><span><img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> </span> Reconciled</button>
+                    <button style ={this.props.table.status == "reconciled" ? yes : no}><span>{this.props.table.status == "reconciled" ? <img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> : <img src="images/Ellipse 2.png" width="9px" className="mr-2"></img>} </span> {this.props.table.status}</button>
                 </div>
             </div>
         )
@@ -40,7 +47,8 @@ export default class Body extends Component {
         show : 20,
         payment: "All",
         clickedshow: false,
-        clickedpay: false
+        clickedpay: false,
+        data : data
     }
     handlerange = (e) => {
         this.setState({
@@ -112,6 +120,8 @@ export default class Body extends Component {
             borderRight: "1.4px solid #CFE8FB",
             height:200
         }
+
+        const tables = this.state.data.map(table => <Table key={table.id} table={table}/>)
         return (
         <React.Fragment>
             <div className="d-flex body flex-column">
@@ -252,15 +262,28 @@ export default class Body extends Component {
                                 <p>Status</p>
                             </div>
                         </div>
-                        <Table />
-                        <Table />
-                        <Table />
+                        {tables}
+                        
                     </div>
                     
                 </div>
-                <div className="footer d-flex justify-content-between">
+                <div className="footer d-flex justify-content-between flex-wrap mt-3">
                     <div>
                         <p>Showing 1 to 10 of 500 entries</p>
+                    </div>
+                    <div className="d-flex">
+                        <div className="d-flex pagination align-items-center justify-content-center px-3 py-1">
+                            <p>Previous</p>
+                        </div>
+                        <div className="d-flex pagination1 align-items-center justify-content-center px-3 py-1 bg-primary text-white">
+                            <p>1</p>
+                        </div>
+                        <div className="d-flex pagination2 align-items-center justify-content-center px-3 py-1">
+                            <p>2</p>
+                        </div>
+                        <div className="d-flex pagination3 align-items-center justify-content-center px-3 py-1">
+                            <p>Next</p>
+                        </div>
                     </div>
                 </div>
             </div>

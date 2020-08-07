@@ -360,6 +360,33 @@ progress[value]::-webkit-progress-value {
   min-width:1030px;
   max-width: 1030px;
 }
+.mobile{
+  display: none;
+}
+.pagination{
+  border: 1px solid #DDE0E3;
+  padding-top:18px !important;
+  height: 40px !important
+}
+.pagination1{
+  border: 1px solid #DDE0E3;
+  padding-top:18px !important;
+  height: 40px !important
+}
+.pagination2{
+  border: 1px solid #DDE0E3;
+  padding-top:18px !important;
+  color: #979797;
+  height: 40px !important
+}
+.pagination3{
+  border: 1px solid #DDE0E3;
+  padding-top:18px !important;
+  height: 40px !important
+}
+
+
+
 @media only screen and (max-width: 579px) {
   .highlight-item {
     min-width: 100% !important;
@@ -381,6 +408,9 @@ progress[value]::-webkit-progress-value {
   .header-right{
     display: none;
   }
+  .header-left{
+    margin-right: 100%;
+  }
   .filter-row{
     max-width: 100% !important;
     width: 100% !important;
@@ -399,7 +429,29 @@ progress[value]::-webkit-progress-value {
   }
   .header{
     display: flex;
-    align-items: center;
+    align-items: center !important;
+    justify-content: space-between;
+    padding:2px 10px !important;
+  }
+  .mobile{
+    display: block;
+  }
+  .mobile-nav{
+    position: absolute;
+    top:60px;
+    text-align: center;
+    z-index: 1;
+    color:white;
+    background-color: #1875F0;
+    right: 1px
+  }
+  .mobile-nav ul {
+    padding: 0 !important;
+    margin: 0 !important
+  }
+  .mobile-nav li{
+    list-style-type: none;
+    padding: 15px;
   }
 }
 
@@ -442,11 +494,15 @@ progress[value]::-webkit-progress-value {
   .out{
     margin-right: 30px !important
   }
+  
 }
 
 @media only screen and (min-width:1366px) {
   .header{
     padding-right:80px !important
+  }
+  .footer{
+    width:1030px
   }
 }
 @media only screen and (min-width:600px) {
@@ -456,4 +512,44 @@ progress[value]::-webkit-progress-value {
       width: 100%;
   }
 }
+}
+@media only screen and (max-width: 803px){
+  @media only screen and (min-width:600px) {
+    .searchbox{
+    display: none
+  }
+  .header{
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+    padding:2px 10px !important;
+  }
+  .mobile{
+    display: block;
+  }
+  .header-right {
+    display: none;
+  }
+  .mobile-nav{
+    position: absolute;
+    top:60px;
+    text-align: center;
+    z-index: 1;
+    color:white;
+    background-color: #1875F0;
+    right: 1px
+  }
+  .header-left{
+    margin-right: 60vw;
+  }
+  .mobile-nav ul {
+    padding: 0 !important;
+    margin: 0 !important
+  }
+  .mobile-nav li{
+    list-style-type: none;
+    padding: 15px;
+  }
+  }
+  
 }

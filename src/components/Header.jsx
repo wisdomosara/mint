@@ -14,9 +14,13 @@ export default class Header extends Component {
         })
     }
     render() {
+        const nav ={ 
+            top:60,
+            right:1
+        }
         return (
             <div className="header">
-                <div className="d-flex justify-content-between align-items-baseline px-5">
+                <div className="d-flex justify-content-between align-items-baseline px-md-5">
                     <div className="header-left d-flex align-items-baseline">
                         <h3>TransMonitor</h3>
                         <div className="searchbox">
@@ -45,9 +49,31 @@ export default class Header extends Component {
                                 </li>
                             </ul>
                     </div>
-                    <div className="mobile">
+                    <div className="mobile mr-auto" onClick={this.handlenav}>
+                        {this.state.mobile ? <img src="images/TWalsh__close1-512.png" width="30px"></img> : <img src="images/Hamburger_icon.svg.png" width="30px"></img>}
                         
                     </div>
+                    {this.state.mobile ? <div className="mobile-nav">
+                            <ul className="d-flex align-items-center justify-content-center flex-column">
+                                    <li>Support</li>
+                                    <li>FAQ</li>
+                                    <li>
+                                        <div className="notification">
+                                            <img src="images/Group (1).png" width="20px"></img>
+                                            <div className="badge">6</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="d-flex align-items-center">
+                                            <div className="mr-3 pt-2">
+                                                <p className="text-right small-name">Hello</p>
+                                                <p className="text-right big-name"> Oluwaleke Ojo</p>
+                                            </div>
+                                            <img src="images/IMG-20180413-WA0005.png" className="round-img mt-1" width="40px" height="43px"></img>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div> : null}
                 </div>
             
             </div>
