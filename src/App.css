@@ -387,7 +387,7 @@ progress[value]::-webkit-progress-value {
 
 
 
-@media only screen and (max-width: 579px) {
+@media only screen and (max-width: 599px) {
   .highlight-item {
     min-width: 100% !important;
   }
@@ -408,9 +408,6 @@ progress[value]::-webkit-progress-value {
   .header-right{
     display: none;
   }
-  .header-left{
-    margin-right: 70%;
-  }
   .filter-row{
     max-width: 100% !important;
     width: 100% !important;
@@ -427,14 +424,16 @@ progress[value]::-webkit-progress-value {
   .searchbox{
     display: none
   }
-  .header{
+  .heading{
+    width: 100%;
     display: flex;
     align-items: center !important;
-    justify-content: space-between;
+    justify-content: space-between !important;
     padding:2px 10px !important;
   }
   .mobile{
     display: block;
+    padding-right: 15px
   }
   .mobile-nav{
     position: absolute;
@@ -518,14 +517,16 @@ progress[value]::-webkit-progress-value {
     .searchbox{
     display: none
   }
-  .header{
+  .heading{
+    width: 100%;
     display: flex;
     align-items: center !important;
-    justify-content: space-between;
+    justify-content: space-between !important;
     padding:2px 10px !important;
   }
   .mobile{
     display: block;
+    padding-right: 10%;
   }
   .header-right {
     display: none;
@@ -538,9 +539,6 @@ progress[value]::-webkit-progress-value {
     color:white;
     background-color: #1875F0;
     right: 1px
-  }
-  .header-left{
-    margin-right: 60vw;
   }
   .mobile-nav ul {
     padding: 0 !important;

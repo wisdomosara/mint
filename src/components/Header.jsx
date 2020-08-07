@@ -20,7 +20,7 @@ export default class Header extends Component {
         }
         return (
             <div className="header">
-                <div className="d-flex justify-content-between align-items-baseline px-md-5">
+                <div className="d-flex heading justify-content-between align-items-baseline px-md-5">
                     <div className="header-left d-flex align-items-baseline">
                         <h3>TransMonitor</h3>
                         <div className="searchbox">
@@ -49,7 +49,7 @@ export default class Header extends Component {
                                 </li>
                             </ul>
                     </div>
-                    <div className="mobile mr-auto" onClick={this.handlenav}>
+                    <div className="mobile" onClick={this.handlenav}>
                         {this.state.mobile ? <img src="images/TWalsh__close1-512.png" width="30px"></img> : <img src="images/Hamburger_icon.svg.png" width="30px"></img>}
                         
                     </div>
