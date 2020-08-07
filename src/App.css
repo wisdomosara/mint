@@ -256,12 +256,12 @@ progress[value]::-webkit-progress-value {
 .search-payments {
   height: 20px;
   padding-bottom: 30px !important;
-  width: 25vw !important;
+  width: 15vw !important;
   border-bottom: 0.5px solid #787878;
 }
 .search-payments input{
   padding: 0 !important;
-  width: auto !important;
+  width: 10vw !important;
   background-color: transparent !important;
 }
 .out{
@@ -409,7 +409,7 @@ progress[value]::-webkit-progress-value {
     display: none;
   }
   .header-left{
-    margin-right: 100%;
+    margin-right: 70%;
   }
   .filter-row{
     max-width: 100% !important;
@@ -418,7 +418,7 @@ progress[value]::-webkit-progress-value {
   .search-payments {
     height: 20px;
     padding-bottom: 30px !important;
-    width: 80vw !important;
+    width: 50vw !important;
     border-bottom: 0.5px solid #787878;
   }
   .filter-row .out{

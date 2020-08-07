@@ -93,32 +93,32 @@ export default class Body extends Component {
         const style1 = {
             width: 105,
             borderRight: "1.4px solid #CFE8FB",
-            height:200
+            height:300
         }
         const style2 = {
             width: 112.6,
             borderRight: "1.4px solid #CFE8FB",
-            height:200
+            height:300
         }
         const style3 = {
             width: 120.6,
             borderRight: "1.4px solid #CFE8FB",
-            height:200
+            height:300
         }
         const style4 = {
-            width: 117.6,
+            width: 128.6,
             borderRight: "1.4px solid #CFE8FB",
-            height:200
+            height:300
         }
         const style5 = {
             width: 122.62,
             borderRight: "1.4px solid #CFE8FB",
-            height:200
+            height:300
         }
         const style6 = {
-            width: 111.62,
+            width: 119.62,
             borderRight: "1.4px solid #CFE8FB",
-            height:200
+            height:300
         }
 
         const tables = this.state.data.map(table => <Table key={table.id} table={table}/>)
@@ -244,7 +244,7 @@ export default class Body extends Component {
                             </ul> : null}
                         </div>
                     </div>
-                    <div className="table-scroll">
+                    <div className="table-scroll mt-3">
                         <div className="table d-flex px-3 align-items-center">
                             <div className="name pt-3" >
                                 <p>Item Type</p>
