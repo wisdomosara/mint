@@ -131,7 +131,7 @@ body{
 }
 .charts{
   height: 329px;
-  width: 100%;;
+  width: 100%;
   max-width: 100%;
   overflow-x: scroll;
 }
@@ -213,32 +213,6 @@ progress[value]::-webkit-progress-value {
   margin-bottom: 10px !important;
   padding: 0 !important
 }
-@media only screen and (max-width: 579px) {
-  .highlight-item {
-    width: 100% !important;
-  }
-  .body{
-    width: 100% !important;
-  }
-  .highlight{
-    flex-direction: column;
-    max-width: 100vw;
-    width: 90% !important
-  }
-  .charts{
-    max-width: 100vw;
-  }
-  .header-right{
-    display: none;
-  }
-  .searchbox{
-    display: none
-  }
-  .header{
-    display: flex;
-    align-items: center;
-  }
-}
 .show-dropdown ul{
   width: 40px !important;
   position: absolute;
@@ -281,8 +255,79 @@ progress[value]::-webkit-progress-value {
 }
 .search-payments input{
   padding: 0 !important;
+  width: auto !important;
   background-color: transparent !important;
 }
+.pay-dropdown ul{
+  width: 150px !important;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  border: 1px solid #DDE0E3
+}
+.pay-dropdown ul li{
+  list-style-type: none;
+  padding:6px 10px;
+  cursor: pointer;
+  color: #7F8FA4;
+}
+.pay-dropdown ul li:hover{
+  background: #F4F4F4;
+}
+.pay-dropdown button{
+  width: 150px;
+  background-color: #FFFFFF;
+  border-style: none;
+  border-radius: 4.25px;
+  color: #7F8FA4;
+  font-size: 12px;
+  height: 31px;
+  text-align: left
+}
+.pay-dropdown button:focus, .pay-dropdown button:target{
+  outline: none;
+}
+.pay-dropdown{
+  width: 150px;
+  position: relative;
+}
+.payments{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+@media only screen and (max-width: 579px) {
+  .highlight-item {
+    width: 100% !important;
+  }
+  .body{
+    width: 100% !important;
+  }
+  .highlight{
+    flex-direction: column;
+    max-width: 100vw;
+    width: 90% !important
+  }
+  .charts{
+    max-width: 100vw;
+  }
+  .header-right{
+    display: none;
+  }
+  .payments{
+    max-width: 100vw;
+  }
+  .searchbox{
+    display: none
+  }
+  .header{
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .sidebar{
     display: none
@@ -301,6 +346,7 @@ progress[value]::-webkit-progress-value {
     display: none;
   }
 }
+
 @media only screen and (min-width:1366px) {
 
 }

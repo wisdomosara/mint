@@ -6,7 +6,8 @@ export default class Body extends Component {
         range : "1 Jan - 30 June",
         show : 20,
         payment: "All",
-        clickedshow: false
+        clickedshow: false,
+        clickedpay: false
     }
     handlerange = (e) => {
         this.setState({
@@ -20,6 +21,12 @@ export default class Body extends Component {
         })
         this.handleshowclick()
     }
+    handlepay = (e) => {
+        this.setState({
+            payment: e.target.textContent
+        })
+        this.handlepayclick()
+    }
     handlerangeclick = () => {
         this.setState(prevState => {
             return {
@@ -31,6 +38,13 @@ export default class Body extends Component {
         this.setState(prevState => {
             return {
                 clickedshow:!prevState.clickedshow
+            }
+        })
+    }
+    handlepayclick = () => {
+        this.setState(prevState => {
+            return {
+                clickedpay:!prevState.clickedpay
             }
         })
     }
@@ -126,15 +140,15 @@ export default class Body extends Component {
                             <img src='images/search.png' width="15px" className="mr-2"></img>
                             <input type="search" placeholder="Search Payments.." className="search-input"></input>
                         </div>
-                        <p>Show</p>
-                        <div className="range-dropdown mr-3">
-                            <button className="range-btn" onClick={this.handlerangeclick}>{this.state.range}<span className="ml-4"><img src="images/Shape.png" width="10px"></img></span></button>
-                            {this.state.clickedRange ? <ul>
-                                <li onClick={this.handlerange}>All</li>
-                                <li onClick={this.handlerange}>Reconcilled</li>
-                                <li onClick={this.handlerange}>Un-reconcilled</li>
-                                <li onClick={this.handlerange}>Settled</li>
-                                <li onClick={this.handlerange}>Unsettled</li>
+                        <p className="mr-4">Show</p>
+                        <div className="pay-dropdown mr-3">
+                            <button className="pay-btn" onClick={this.handlepayclick}>{this.state.payment}<span className="float-right"><img src="images/Shape.png" width="10px"></img></span></button>
+                            {this.state.clickedpay ? <ul>
+                                <li onClick={this.handlepay}>All</li>
+                                <li onClick={this.handlepay}>Reconcilled</li>
+                                <li onClick={this.handlepay}>Un-reconcilled</li>
+                                <li onClick={this.handlepay}>Settled</li>
+                                <li onClick={this.handlepay}>Unsettled</li>
                             </ul> : null}
                         </div>
                     </div>
