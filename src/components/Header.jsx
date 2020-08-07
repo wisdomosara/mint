@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
 
 export default class Header extends Component {
+
+    state = {
+        mobile: false
+    }
+
+    handlenav = () => {
+        this.setState(prevState => {
+            return {
+                mobile : !prevState.mobile
+            }
+        })
+    }
     render() {
         return (
             <div className="header">
@@ -32,6 +44,9 @@ export default class Header extends Component {
                                     </div>
                                 </li>
                             </ul>
+                    </div>
+                    <div className="mobile">
+                        
                     </div>
                 </div>
             

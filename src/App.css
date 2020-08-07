@@ -137,6 +137,7 @@ body{
 .charts-left{
   min-width:689px;
   height: 100%;
+  position: relative;
   background-color: #FFFFFF;
   border-right: 4px solid #F7F8FA;
   margin-bottom: 20px;
@@ -205,6 +206,12 @@ progress[value]::-webkit-progress-value {
   box-sizing: border-box;
   height: 100%;
 }
+.charts-left-bottom{
+}
+.graph{
+  position: absolute;
+  bottom: 0
+}
 .charts-right p{
   font-size: 14px;
   color: #262626;
@@ -257,6 +264,9 @@ progress[value]::-webkit-progress-value {
   width: auto !important;
   background-color: transparent !important;
 }
+.out{
+  margin-right:30px !important;
+}
 .pay-dropdown ul{
   width: 150px !important;
   position: absolute;
@@ -293,8 +303,8 @@ progress[value]::-webkit-progress-value {
   position: relative;
 }
 .filter-row{
-  width: 100%;
-  max-width: 100%;
+  width: 90%;
+  max-width: 90%;
 }
 .payment{
   width: 100%;
@@ -304,23 +314,23 @@ progress[value]::-webkit-progress-value {
   font-size: 14px !important
 }
 .name{
-  width:300px;
+  min-width:300px;
   margin-right: 157px;
 }
 .price{
-  width:62px;
+  min-width:62px;
   margin-right: 54px;
 }
 .transact{
-  width:94px;
+  min-width:94px;
   margin-right: 71px;
 }
 .time{
-  width:32px;
+  min-width:32px;
   margin-right: 59px;
 }
 .status{
-  width:120px;
+  min-width:120px;
   padding-top:-15px;
 }
 .status button{
@@ -337,11 +347,19 @@ progress[value]::-webkit-progress-value {
 .table{
   background-color: #EAEEF0;
   height: 42px;
-  margin:0 !important;
-  min-width: 100%;
-  overflow: scroll
+  min-width: 1030px;
+  max-width: 1030px;
+  margin:0 !important;  
 }
-
+.table-scroll{
+  overflow: scroll;
+  height: 329px ;
+  overflow-y:auto;
+}
+.table-component{
+  min-width:1030px;
+  max-width: 1030px;
+}
 @media only screen and (max-width: 579px) {
   .highlight-item {
     min-width: 100% !important;
@@ -428,7 +446,7 @@ progress[value]::-webkit-progress-value {
 
 @media only screen and (min-width:1366px) {
   .header{
-    padding-right:3% !important
+    padding-right:80px !important
   }
 }
 @media only screen and (min-width:600px) {

@@ -10,7 +10,7 @@ import React, { Component } from 'react';
             height: 76
         }
         return (
-            <div className="d-flex align-items-center px-3" style={style}>
+            <div className="d-flex align-items-center table-component px-3" style={style}>
                 <div className="name d-flex align-items-center">
                     <img src="images/vw symbol.png" className="mr-3" width="36px"></img>
                     <p className="pt-2">Apple Mac Book 15” 250 SSD 12GB</p>
@@ -82,6 +82,36 @@ export default class Body extends Component {
         })
     }
     render() {
+        const style1 = {
+            width: 105,
+            borderRight: "1.4px solid #CFE8FB",
+            height:200
+        }
+        const style2 = {
+            width: 112.6,
+            borderRight: "1.4px solid #CFE8FB",
+            height:200
+        }
+        const style3 = {
+            width: 120.6,
+            borderRight: "1.4px solid #CFE8FB",
+            height:200
+        }
+        const style4 = {
+            width: 117.6,
+            borderRight: "1.4px solid #CFE8FB",
+            height:200
+        }
+        const style5 = {
+            width: 122.62,
+            borderRight: "1.4px solid #CFE8FB",
+            height:200
+        }
+        const style6 = {
+            width: 111.62,
+            borderRight: "1.4px solid #CFE8FB",
+            height:200
+        }
         return (
         <React.Fragment>
             <div className="d-flex body flex-column">
@@ -119,7 +149,7 @@ export default class Body extends Component {
                 </div>
                 <div className="charts  d-flex">
                     <div className="charts-left">
-                        <div className="charts-left-top px-3 d-flex justify-content-between py-2">
+                        <div className="charts-left-top mb-3 px-3 d-flex justify-content-between py-2">
                             <h5>Today: 5, Aug 2018</h5>
                             <div className="d-flex align-items-center">
                                 <div className="range-dropdown mr-3">
@@ -140,9 +170,28 @@ export default class Body extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="charts-left-bottom">
-                            
+                        <div className="charts-left-bottom d-flex">
+                            <div className="text-center" style={style1}>
+                                <p>Jan</p>
+                            </div>
+                            <div className="text-center" style={style2}>
+                                <p>Feb</p>
+                            </div>
+                            <div className="text-center" style={style3}>
+                                <p>Mar</p>
+                            </div>
+                            <div className="text-center" style={style4}>
+                                <p>Apr</p>
+                            </div>
+                            <div className="text-center" style={style5}>
+                                <p>May</p>
+                            </div>
+                            <div className="text-center" style={style6}>
+                                <p>Jun</p>
+                            </div>
+
                         </div>
+                        <img className="graph" src="images/Gradient.png"></img>
                     </div>
                     <div className="charts-right p-3">
                         <p>Orders</p>
@@ -185,26 +234,34 @@ export default class Body extends Component {
                             </ul> : null}
                         </div>
                     </div>
-                    <div className="table d-flex px-3 align-items-center">
-                        <div className="name pt-3" >
-                            <p>Item Type</p>
+                    <div className="table-scroll">
+                        <div className="table d-flex px-3 align-items-center">
+                            <div className="name pt-3" >
+                                <p>Item Type</p>
+                            </div>
+                            <div className="price pt-3" >
+                                <p>Price</p>
+                            </div>
+                            <div className="transact pt-3" >
+                                <p>Transaction No</p> 
+                            </div>
+                            <div className="time pt-3" >
+                                <p>Time</p>
+                            </div>
+                            <div className="status pt-3" >
+                                <p>Status</p>
+                            </div>
                         </div>
-                        <div className="price pt-3" >
-                            <p>Price</p>
-                        </div>
-                        <div className="transact pt-3" >
-                            <p>Transaction No</p> 
-                        </div>
-                        <div className="time pt-3" >
-                            <p>Time</p>
-                        </div>
-                        <div className="status pt-3" >
-                            <p>Status</p>
-                        </div>
+                        <Table />
+                        <Table />
+                        <Table />
                     </div>
-                    <Table />
-                    <Table />
-                    <Table />
+                    
+                </div>
+                <div className="footer d-flex justify-content-between">
+                    <div>
+                        <p>Showing 1 to 10 of 500 entries</p>
+                    </div>
                 </div>
             </div>
         </React.Fragment>
