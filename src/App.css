@@ -55,6 +55,7 @@ body{
 .search-input{
   border-style: none;
   font-size: 14px;
+  width: 60px
 }
 .search-input:focus, .search-input:target{
   border-style: none;
@@ -126,11 +127,12 @@ body{
   margin-top: -10px
 }
 .charts{
-  width: 100%;
+  width: 1000px;
   height: 329px;
+  overflow-x: scroll;
 }
 .charts-left{
-  width:689px;
+  min-width:689px;
   height: 100%;
   background-color: #FFFFFF;
   border-right: 4px solid #F7F8FA;
@@ -214,6 +216,16 @@ progress[value]::-webkit-progress-value {
   .body{
     width: 100% !important;
   }
+  .header-right{
+    display: none;
+  }
+  .searchbox{
+    display: none
+  }
+  .header{
+    display: flex;
+    align-items: center;
+  }
 }
 @media only screen and (max-width: 767px) {
   .sidebar{
@@ -221,6 +233,16 @@ progress[value]::-webkit-progress-value {
   }
   .charts-left{
     width: 500px;
+  }
+  .searchbox{
+    display: none
+  }
+  .header{
+    display: flex;
+    align-items: center;
+  }
+  .header-right{
+    display: none;
   }
 }
 @media only screen and (min-width:1366px) {

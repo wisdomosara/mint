@@ -58,7 +58,7 @@ export default class Body extends Component {
                         </div>
                 </div>
             </div>
-            <div className="charts container d-flex flex-wrap">
+            <div className="charts container d-flex">
                     <div className="charts-left">
                         <div className="charts-left-top px-3 d-flex justify-content-between py-2">
                             <h5>Today: 5, Aug 2018</h5>
