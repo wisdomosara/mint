@@ -211,8 +211,6 @@ progress[value]::-webkit-progress-value {
   box-sizing: border-box;
   height: 100%;
 }
-.charts-left-bottom{
-}
 .graph{
   position: absolute;
   bottom: 0
