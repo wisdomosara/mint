@@ -32,7 +32,7 @@ import data from './dummydata'
                     <p>{this.props.table.time}</p>
                 </div>
                 <div className="status pt-3" >
-                    <button style ={this.props.table.status == "reconciled" ? yes : no}><span>{this.props.table.status == "reconciled" ? <img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> : <img src="images/Ellipse 2.png" width="9px" className="mr-2"></img>} </span> {this.props.table.status}</button>
+                    <button  style ={this.props.table.status == "reconciled" ? yes : no}><span>{this.props.table.status == "reconciled" ? <img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> : <img src="images/Ellipse 2.png" width="9px" className="mr-2"></img>} </span> {this.props.table.status}</button>
                 </div>
             </div>
         )
@@ -91,12 +91,12 @@ export default class Body extends Component {
     }
     render() {
         const style1 = {
-            width: 105,
+            width: 110,
             borderRight: "1.4px solid #CFE8FB",
             height:300
         }
         const style2 = {
-            width: 112.6,
+            width: 122.6,
             borderRight: "1.4px solid #CFE8FB",
             height:300
         }
@@ -117,7 +117,7 @@ export default class Body extends Component {
         }
         const style6 = {
             width: 119.62,
-            borderRight: "1.4px solid #CFE8FB",
+           
             height:300
         }
 
@@ -126,14 +126,14 @@ export default class Body extends Component {
         <React.Fragment>
             <div className="d-flex body flex-column">
                 <div className="highlight d-flex flex-wrap">
-                        <div className="highlight-item mr-sm-2 mb-2 d-flex justify-content-between flex-wrap">
+                        <div className="highlight-item mb-2 d-flex justify-content-between flex-wrap">
                             <div>
                                 <p>Daily Transaction Volume</p>
                                 <p className="font-weight-bold figures">2,342</p>
                             </div>
                             <img src="images/small chart.png" width="63px"></img>
                         </div>
-                        <div className="highlight-item mr-sm-2 mb-2 d-flex justify-content-between">
+                        <div className="highlight-item mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Daily Transaction Value</p>
                                 <p className="font-weight-bold figures">₦4,000,000</p>
@@ -142,7 +142,7 @@ export default class Body extends Component {
                         </div>
                     
                     
-                        <div className="highlight-item mr-sm-2 mb-2 d-flex justify-content-between">
+                        <div className="highlight-item mb-2 d-flex justify-content-between">
                             <div>
                                 <p>Total Transaction Volume</p>
                                 <p className="font-weight-bold figures">452,000</p>
@@ -220,7 +220,7 @@ export default class Body extends Component {
                     <h4>Payments</h4>
                     <div className="filter-row d-flex align-items-baseline flex-wrap">
                         <p className="mr-4">Showing</p>
-                        <div className="show-dropdown mr-5">
+                        <div className="show-dropdown mr-3">
                             <button className="show-btn" onClick={this.handleshowclick}>{this.state.show}<span className="ml-2"><img src="images/Shape.png" width="10px"></img></span></button>
                             {this.state.clickedshow ? <ul>
                                 <li onClick={this.handleshow}>10</li>

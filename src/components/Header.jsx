@@ -20,7 +20,7 @@ export default class Header extends Component {
         }
         return (
             <div className="header">
-                <div className="d-flex heading justify-content-between align-items-baseline px-md-5">
+                <div className="d-flex heading justify-content-between align-items-baseline">
                     <div className="header-left d-flex align-items-baseline">
                         <h3>TransMonitor</h3>
                         <div className="searchbox">
