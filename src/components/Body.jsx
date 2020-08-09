@@ -20,7 +20,7 @@ import data from './dummydata'
             <div className="d-flex align-items-center table-component px-3" style={style}>
                 <div className="name d-flex align-items-center">
                     <img src="images/vw symbol.png" className="mr-3" width="36px"></img>
-                    <p className="pt-2">{this.props.table["name"]}</p>
+                    <p className="pt-3">{this.props.table["name"]}</p>
                 </div>
                 <div className="price text-left pt-3" >
                     <p>{this.props.table.price}</p>
@@ -32,7 +32,7 @@ import data from './dummydata'
                     <p>{this.props.table.time}</p>
                 </div>
                 <div className="status pt-3" >
-                    <button  style ={this.props.table.status == "reconciled" ? yes : no}><span>{this.props.table.status == "reconciled" ? <img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> : <img src="images/Ellipse 2.png" width="9px" className="mr-2"></img>} </span> {this.props.table.status}</button>
+                    <button  style ={this.props.table.status == "Reconciled" ? yes : no}><span>{this.props.table.status == "Reconciled" ? <img src="images/Ellipse 2 (1).png" width="9px" className="mr-2"></img> : <img src="images/Ellipse 2.png" width="9px" className="mr-2"></img>} </span> {this.props.table.status}</button>
                 </div>
             </div>
         )
@@ -93,32 +93,38 @@ export default class Body extends Component {
         const style1 = {
             width: 110,
             borderRight: "1.4px solid #CFE8FB",
-            height:300
+            height:250
         }
         const style2 = {
             width: 122.6,
             borderRight: "1.4px solid #CFE8FB",
-            height:300
+            height:250
         }
         const style3 = {
             width: 120.6,
             borderRight: "1.4px solid #CFE8FB",
-            height:300
+            height:250
         }
         const style4 = {
             width: 128.6,
             borderRight: "1.4px solid #CFE8FB",
-            height:300
+            height:250
         }
         const style5 = {
             width: 122.62,
             borderRight: "1.4px solid #CFE8FB",
-            height:300
+            height:250
         }
         const style6 = {
             width: 119.62,
            
-            height:300
+            height:250
+        }
+        const yes = {
+            color: "#7AE602"
+        }
+        const no = {
+            color : "#EBC315"
         }
 
         const tables = this.state.data.map(table => <Table key={table.id} table={table}/>)
@@ -159,7 +165,7 @@ export default class Body extends Component {
                 </div>
                 <div className="charts  d-flex">
                     <div className="charts-left">
-                        <div className="charts-left-top mb-3 px-3 d-flex justify-content-between py-2">
+                        <div className="charts-left-top mb-3 px-3 d-flex justify-content-between pt-3">
                             <h5>Today: 5, Aug 2018</h5>
                             <div className="d-flex align-items-center">
                                 <div className="range-dropdown mr-3">
@@ -206,17 +212,17 @@ export default class Body extends Component {
                     <div className="charts-right p-3">
                         <p>Orders</p>
                         <progress  value="80" max="100"></progress>
-                        <p>Pending Orders: 20</p>
-                        <p>Reconcilled Orders: 80</p>
+                        <p>Pending Orders: <span style={no}>20</span></p>
+                        <p>Reconcilled Orders: <span style={yes}>80</span></p>
                         <p>Total Orders: 100</p>
                         <p className=" mt-5">Orders</p>
                         <progress  value="80" max="100"></progress>
-                        <p>Un-reconcilled Payments: 20</p>
-                        <p>Reconcilled Payments: 80</p>
+                        <p>Un-reconcilled Payments: <span style={no}>20</span></p>
+                        <p>Reconcilled Payments: <span style={yes}>80</span></p>
                         <p>Total Payments: 100</p>
                     </div>
                 </div>
-                <div className="payment">
+                <div className="payment mt-4">
                     <h4>Payments</h4>
                     <div className="filter-row d-flex align-items-baseline flex-wrap">
                         <p className="mr-4">Showing</p>
@@ -267,7 +273,7 @@ export default class Body extends Component {
                     </div>
                     
                 </div>
-                <div className="footer d-flex justify-content-between flex-wrap mt-3">
+                <div className="footer d-flex justify-content-between  align-items-baseline flex-wrap mt-3">
                     <div>
                         <p>Showing 1 to 10 of 500 entries</p>
                     </div>

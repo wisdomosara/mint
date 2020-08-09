@@ -4,7 +4,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "reconciled",
+        status: "Reconciled",
         id: 1
     },
     {
@@ -12,7 +12,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "pending",
+        status: "Pending",
         id: 2
     },
     {
@@ -20,7 +20,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "pending",
+        status: "Pending",
         id: 3
     },
     {
@@ -28,7 +28,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "reconciled",
+        status: "Reconciled",
         id: 4
     },
     {
@@ -36,7 +36,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "reconciled",
+        status: "Reconciled",
         id: 5
     },
     {
@@ -44,7 +44,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "reconciled",
+        status: "Reconciled",
         id: 6
     },
     {
@@ -52,7 +52,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "reconciled",
+        status: "Reconciled",
         id: 7
     },
     {
@@ -60,7 +60,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "pending",
+        status: "Pending",
         id: 8
     },
     {
@@ -68,7 +68,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "reconciled",
+        status: "Reconciled",
         id: 9
     },
     {
@@ -76,7 +76,7 @@ const data = [
         price: "$73430",
         transactionNo : "1234567890",
         time: "12:30",
-        status: "pending",
+        status: "Pending",
         id: 10
     }
 ]

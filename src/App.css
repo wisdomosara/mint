@@ -15,6 +15,7 @@ body{
   z-index: 4;
 }
 .heading{
+
   padding-left:  40px;
   padding-right: 40px
 }
@@ -47,6 +48,7 @@ body{
 }
 .small-name{
   font-size: 13px;
+  padding-top: 15px
 }
 .big-name{
   margin-top: -20px;
@@ -114,12 +116,12 @@ body{
   margin-bottom: 27px;
 }
 .highlight-item{
-  width: 248px;
+  width: 250px;
   height: 75px;
   background-color: #FFFFFF;
   border-radius: 2px;
   padding:12px 12px;
-  margin-right: 11px !important
+  margin-right: 7.25px !important
 }
 .highlight-item p{
   font-size: 12px
@@ -317,6 +319,10 @@ progress[value]::-webkit-progress-value {
 .table p, .name p, .price p, .transact p, .time p, .status p{
   font-size: 14px !important
 }
+.payment p{
+  font-size: 14px;
+  color: #262626
+}
 .name{
   min-width:300px;
   margin-right: 157px;
@@ -340,11 +346,10 @@ progress[value]::-webkit-progress-value {
 .status button{
   display: flex;
   align-items: center;
-  justify-content: center;
   border-style: none;
-  width:120px !important;
-  border-radius: 40px;
-  padding: 5px 20px;
+  width:130px !important;
+  border-radius: 20px;
+  padding: 5px 30px 5px 10px;
   margin-top: -15px;
   background-color: transparent;
   border:1px solid #DDE0E3
@@ -369,23 +374,32 @@ progress[value]::-webkit-progress-value {
 .pagination{
   border: 1px solid #DDE0E3;
   padding-top:18px !important;
-  height: 40px !important
+  height: 40px !important;
+  color: #262626
 }
 .pagination1{
   border: 1px solid #DDE0E3;
   padding-top:18px !important;
-  height: 40px !important
+  height: 40px !important;
+  color: white !important;
 }
 .pagination2{
   border: 1px solid #DDE0E3;
   padding-top:18px !important;
   color: #979797;
-  height: 40px !important
+  height: 40px !important;
+  color: #262626
 }
 .pagination3{
   border: 1px solid #DDE0E3;
   padding-top:18px !important;
-  height: 40px !important
+  height: 40px !important;
+  color: #262626
+}
+.footer p{
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 
@@ -451,6 +465,7 @@ progress[value]::-webkit-progress-value {
   .mobile-nav{
     position: absolute;
     top:60px;
+    width: 50%;
     text-align: center;
     z-index: 1;
     color:white;
@@ -474,6 +489,10 @@ progress[value]::-webkit-progress-value {
   .mobile-nav li{
     list-style-type: none;
     padding: 15px;
+  }
+  .header-left {
+    padding-top: 10px !important;
+    padding-left: 10px 
   }
 }
 
@@ -574,6 +593,10 @@ progress[value]::-webkit-progress-value {
   .header-right {
     display: none;
   }
+  .header-left{
+    padding-left:10px;
+    padding-top: 10px
+  }
   .header{
     display: flex;
     align-items: center;
@@ -581,6 +604,7 @@ progress[value]::-webkit-progress-value {
   .mobile-nav{
     position: absolute;
     top:60px;
+    width: 100%;
     text-align: center;
     z-index: 1;
     color:white;
@@ -589,7 +613,10 @@ progress[value]::-webkit-progress-value {
   }
   .mobile-nav ul {
     padding: 0 !important;
-    margin: 0 !important
+    margin: 0 !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: baseline
   }
   .mobile-nav li{
     list-style-type: none;
